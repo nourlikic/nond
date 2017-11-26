@@ -1,9 +1,13 @@
 package types
 
-type YContract struct{
+import (
+	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/ethereum/go-ethereum/common"
+)
 
-	AbiIdentifier string
+type Contract struct {
+	AbiIdentifier      string
 	ContractIdentifier string
-	Address string
-	Abi []byte
+	Address            common.Address
+	Abi                abi.ABI
 }
